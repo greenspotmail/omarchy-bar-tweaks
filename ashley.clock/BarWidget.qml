@@ -31,6 +31,9 @@ BarWidget {
   readonly property string displayText: formatted(displayDate)
   readonly property var verticalLines: displayText.split("\n")
 
+  // Bigger than the bar's default body text size without dominating the bar.
+  readonly property real clockFontSize: vertical ? Style.font.body : 16
+
   function refresh() {
     displayDate = new Date()
     if (panelLoader.item && panelLoader.item.refresh) panelLoader.item.refresh()
@@ -147,6 +150,7 @@ BarWidget {
     // Bright accent color instead of the bar's normal foreground, so the
     // clock stands out at a glance.
     foreground: Color.accent
+    fontSize: root.clockFontSize
     labelVisible: !root.vertical
     hasVisualContent: root.vertical ? root.verticalLines.length > 0 : text !== ""
     fixedHeight: root.vertical ? root.verticalLines.length * Style.bar.iconSlot : -1
