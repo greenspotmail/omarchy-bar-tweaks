@@ -1,0 +1,12 @@
+# This repo only tracks the bar-widget customizations below. Everything
+# else under ~/.config/omarchy/plugins/ (other plugins, some of which are
+# their own separate git repos) is intentionally left alone.
+/*
+
+!/ashley.clock/
+!/ashley.weather/
+!/ashley.indicators/
+!/ashley.workspaces/
+!/README.md
+!/LICENSE
+!/.gitignore
