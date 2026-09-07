@@ -147,9 +147,9 @@ BarWidget {
     anchors.fill: parent
     bar: root.bar
     text: root.vertical ? "" : root.displayText
-    // Bright accent color instead of the bar's normal foreground, so the
-    // clock stands out at a glance.
-    foreground: Color.accent
+    // Lightened accent instead of the bar's normal foreground (or the
+    // theme's often-muted raw accent), so the clock stands out at a glance.
+    foreground: Qt.lighter(Color.accent, 1.35)
     fontSize: root.clockFontSize
     labelVisible: !root.vertical
     hasVisualContent: root.vertical ? root.verticalLines.length > 0 : text !== ""

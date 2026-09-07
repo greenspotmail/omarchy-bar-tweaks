@@ -70,8 +70,8 @@ BarWidget {
         // Underline instead of swapping the number for a glyph \u2014 the
         // number stays in the normal theme color, same as every other
         // workspace, and only this bar picks out which one is focused.
-        // Matches the clock's accent color for a consistent "current"
-        // marker across the bar.
+        // Lightened accent to match the clock's brighter marker color for
+        // a consistent "current" indicator across the bar.
         Rectangle {
           visible: parent.focused
           anchors.horizontalCenter: parent.horizontalCenter
@@ -79,7 +79,7 @@ BarWidget {
           width: Style.space(12)
           height: Style.space(2)
           radius: height / 2
-          color: Color.accent
+          color: Qt.lighter(Color.accent, 1.35)
         }
       }
     }
