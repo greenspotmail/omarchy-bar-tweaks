@@ -32,7 +32,7 @@ BarWidget {
   readonly property var verticalLines: displayText.split("\n")
 
   // Bigger than the bar's default body text size without dominating the bar.
-  readonly property real clockFontSize: vertical ? Style.font.body : 16
+  readonly property real clockFontSize: vertical ? Style.font.body : 14
 
   function refresh() {
     displayDate = new Date()
